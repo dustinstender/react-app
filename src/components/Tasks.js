@@ -1,13 +1,8 @@
-const tasks = [
-  { name: "Dustin", status: "Yes" },
-  { name: "Laura", status: "No" },
-];
-
-const Tasks = () => {
+const Tasks = ({tasks}) => {
   return (
     <>
       {tasks.map((task) => (
-        <h3>{task.name}</h3>
+        <h3 key={task.id}>{task.name}</h3>
       ))}
     </>
   )
