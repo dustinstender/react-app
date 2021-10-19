@@ -7,10 +7,16 @@ function App() {
     { name: "get head", date: "10/10/2021", id: 2 },
     { name: "run", date: "11/10/2021", id: 1 },
   ]);
+
+  // Delete Task
+  const deleteTask = (id) => {
+    console.log('delete', id)
+  }
+
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks}/>
+      <Tasks tasks={tasks} onDelete={deleteTask}/>
     </div>
   );
 }
